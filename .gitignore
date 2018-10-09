@@ -110,7 +110,7 @@ Thumbs.db
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins" directory
-# "plugins" directory
+# "plugins" directorygit p
 # "themes" directory
 wp-content/*
 !wp-content/mu-plugins/
