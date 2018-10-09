@@ -1,71 +1,34 @@
-# NPM #
-##########
-# Ignore all directories called node_modules in current folder and any subfolders.
-node_modules/
-/node_modules/
-
-# Packages #
-############
-*.7z
-*.dmg
-*.gz
-*.bz2
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.tgz
-*.map
-
-# Logs and databases #
-######################
-*.log
-*.sql
-*.env
-
-# OS generated files #
-######################
-**.DS_Store*
-ehthumbs.db
-Icon?
-Thumbs.db
-._*
-
-# Vim generated files #
-######################
-*.un~
-
-# SASS #
-##########
-**/.sass-cache
-**/.sass-cache/*
-**/.map
-
-# Composer #
-##########
-!assets/js/vendor/
-wpcs/
-/vendor/
-
-# Bower #
-##########
-assets/bower_components/*
-
-# Codekit #
-##########
-/codekit-config.json
-*.codekit
-**.codekit-cache/*
-
-# Compiled Files and Build Dirs #
-##########
-/README.html
-
-# PhpStrom Project Files #
-.idea/
-library/vendors/composer
-assets/img/.DS_Store
+# -----------------------------------------------------------------
+# .gitignore for WordPress
+# Bare Minimum Git
+# http://ironco.de/bare-minimum-git/
+# ver 20150227
+#
+# This file is tailored for a WordPress project 
+# using the default directory structure
+#
+# This file specifies intentionally untracked files to ignore
+# http://git-scm.com/docs/gitignore
+#
+# NOTES:
+# The purpose of gitignore files is to ensure that certain files not
+# tracked by Git remain untracked.
+#
+# To ignore uncommitted changes in a file that is already tracked,
+# use `git update-index --assume-unchanged`.
+#
+# To stop tracking a file that is currently tracked,
+# use `git rm --cached`
+#
+# Change Log:
+# 20150227 Ignore hello.php plugin. props @damienfa
+# 20150227 Change theme ignore to wildcard twenty*. props @Z33
+# 20140606 Add .editorconfig as a tracked file
+# 20140404 Ignore database, compiled, and packaged files
+# 20140404 Header Information Updated
+# 20140402 Initially Published
+#
+# -----------------------------------------------------------------
 
 # ignore everything in the root except the "wp-content" directory.
 /*
@@ -108,9 +71,19 @@ Thumbs.db
 *.o
 *.so
 
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins" directory
-# "plugins" directorygit p
+# "plugins" directory
 # "themes" directory
 wp-content/*
 !wp-content/mu-plugins/
