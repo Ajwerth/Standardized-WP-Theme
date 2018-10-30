@@ -1,0 +1,23 @@
+{
+  "name": "one_seo_theme",
+  "version": "1.0.0",
+  "description": "This is a standard boilerplate WordPress theme.",
+  "private": true,
+  "main": "assets/js/public.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ajwerth/Standardized-WP-Theme.git"
+  },
+  "keywords": [],
+  "author": "Alex Werthheimer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ajwerth/Standardized-WP-Theme/issues"
+  },
+  "homepage": "https://github.com/Ajwerth/Standardized-WP-Theme#readme",
+  "devDependencies": {
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {}
+}
