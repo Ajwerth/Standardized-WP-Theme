@@ -1,7 +1,10 @@
+import css from '../css/style.css';
 'use strict';
 
 (function($) {
     $(function() {
-        console.log('watching not again');
+        console.log('watching');
+        const isBabel = !(class {}.toString().indexOf('class ') === 0);
+        console.log(isBabel);
     });
 })(jQuery);
