@@ -165,5 +165,5 @@ if ( class_exists( 'WooCommerce' ) ) {
 add_action('wp_enqueue_scripts', 'webpack_wp');
 
 function webpack_wp() {
-	wp_enqueue_script('webpack-js', get_template_directory_uri() . '/dist/main.js', array('jquery'), '', false);
+	wp_enqueue_script('webpack-js', get_template_directory_uri() . '/dist/bundle.js', array('jquery'), '', false);
 }

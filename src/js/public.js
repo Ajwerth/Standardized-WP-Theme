@@ -2,6 +2,6 @@
 
 (function($) {
     $(function() {
-        console.log('loaded')
+        console.log('watching not again');
     });
 })(jQuery);

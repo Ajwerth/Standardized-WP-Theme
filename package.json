@@ -4,6 +4,10 @@
   "description": "This is a standard boilerplate WordPress theme.",
   "private": true,
   "main": "assets/js/public.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ajwerth/Standardized-WP-Theme.git"
