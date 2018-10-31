@@ -151,6 +151,7 @@ add_action('wp_enqueue_scripts', 'webpack_wp');
 function webpack_wp() {
 	wp_enqueue_style( 'dist_style', get_template_directory_uri() . '/dist/style.css' );
 	wp_enqueue_script('webpack-js', get_template_directory_uri() . '/dist/bundle.js', array('jquery'), '', false);
+	wp_enqueue_script('service-worker', get_template_directory_uri() . '/dist/service-worker.js', array('jquery'), '', false);
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
