@@ -1,21 +1,26 @@
 const path = require('path');
-const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
     entry: {
-      main: './src/js/index.js',
-      
+      bundle: './src/js/index.js'
     },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
         new CleanWebpackPlugin('dist', {}),
         new MiniCssExtractPlugin({
           filename: 'style.css',
+        }),
+        new WorkboxPlugin.GenerateSW({
+          // these options encourage the ServiceWorkers to get in there fast 
+          // and not allow any straggling "old" SWs to hang around
+          clientsClaim: true,
+          skipWaiting: true
         })
     ],
     module: {
