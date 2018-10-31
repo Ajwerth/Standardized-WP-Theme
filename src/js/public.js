@@ -1,4 +1,3 @@
-import css from '../css/style.css';
 'use strict';
 
 (function($) {

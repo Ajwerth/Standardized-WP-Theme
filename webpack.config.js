@@ -1,10 +1,12 @@
 const path = require('path');
-
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const WebpackMd5Hash = require('webpack-md5-hash');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
       main: './src/js/public.js',
+      style: './src/js/style.js',
       customizer: './src/js/customizer.js',
       navigation: './src/js/navigation.js',
       focusFix: './src/js/skip-link-focus-fix.js'
@@ -14,31 +16,25 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        new UglifyJSPlugin()
+        new CleanWebpackPlugin('dist', {}),
+        new MiniCssExtractPlugin({
+          filename: 'style.css',
+        })
     ],
     module: {
         rules: [
           {
             test: /\.js$/,
-            exclude: /(node_modules|bower_components)/,
+            exclude: /node_modules/,
             use: {
-              loader: 'babel-loader',
-              options: {
-                presets: ['babel-preset-env']
-              }
+              loader: "babel-loader"
             }
           },
           {
-            test: /\.css$/,
-            loader: 'style-loader',
-          },
-          {
-            test: /\.css$/,
-            loader: 'css-loader',
-            options: {
-              minimize: true
-            }
+            test: /\.s[c|a]ss$/,
+            use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
           }
         ]
+      
     }
 };
