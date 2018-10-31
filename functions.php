@@ -1,10 +1,10 @@
 <?php
 /**
- * 1seo_Theme functions and definitions
+ * 1SEO_Theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package 1seo_Theme
+ * @package 1SEO_Theme
  */
 
 if ( ! function_exists( 'one_seo_theme_setup' ) ) :
@@ -141,13 +141,6 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
-}
-
-/**
- * Load WooCommerce compatibility file.
- */
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
 }
 
 /**
