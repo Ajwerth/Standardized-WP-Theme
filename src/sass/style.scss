@@ -1,3 +1,12 @@
-a {
-    color: red!important;
+body {
+    padding: 20px;
+}
+
+h1 {
+    a {
+        color: #333!important;
+        border: solid #333 5px;
+        padding: 20px;
+        text-decoration: none;
+    }
 }

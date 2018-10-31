@@ -5,14 +5,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-      main: './src/js/public.js',
-      style: './src/js/style.js',
-      customizer: './src/js/customizer.js',
-      navigation: './src/js/navigation.js',
-      focusFix: './src/js/skip-link-focus-fix.js'
+      main: './src/js/index.js',
+      
     },
     output: {
-        filename: '[name].js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
