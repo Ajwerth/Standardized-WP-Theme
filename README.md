@@ -2,7 +2,7 @@
 
 This is a standard boilerplate WordPress theme modified from the [Underscores Theme](https://underscores.me).
 
-# New Features!
+## New Features!
 
   - Webpack v4: Bundle all your JS and SCSS into 1 File Each.
   - Babel: Use ES6 with ease.
@@ -18,8 +18,11 @@ Making Changes:
 
 First you'll need to install dependancies. The following should be installed globally on your system.
 
-- yarn https://yarnpkg.com/lang/en/docs/install/
-- Local WordPress Environment: https://local.getflywheel.com/
+1. yarn https://yarnpkg.com/lang/en/docs/install/
+2. Local WordPress Environment: 
+    -Local By Fly Wheel https://local.getflywheel.com/ *Easier Set Up - Heavier Program*
+    -Laravel Valet https://laravel.com/docs/5.7/valet *Trickier Set up - More Light Wieght*
+    -Or any other local environemt.
 
 Once you have yarn and your local WordPress install we're ready to install our dependancies.
 
@@ -43,12 +46,7 @@ $ yarn build //builds for production
 
 ### Development
 
-Want to contribute? Send pull requests!
-
-### Todos
-
- - Structure SCSS files for ease of use and organization.
- - Finish SW Precache implementation. (Not working completely.)
+Want to contribute? Check the issues tab. Pull this down, branch it, make edits, commit edits, send pull requests! 
 
 License
 ----
